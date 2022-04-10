@@ -7,8 +7,12 @@ const Card = ({ dog }) => {
     const [image, setImage] = useState([]);
 
     useEffect(() => {
+        const breed = dog.split(' ');
+        const url = breed.length > 1
+            ? `https://dog.ceo/api/breed/${breed[0]}/${breed[1]}/images/random`
+            : `https://dog.ceo/api/breed/${breed[0]}/images/random`
         setLoading(true);
-        fetch(`https://dog.ceo/api/breed/${dog}/images/random`)
+        fetch(url)
             .then(response => {
                 if (response.ok) {
                     return response.json();
@@ -16,8 +20,7 @@ const Card = ({ dog }) => {
                 throw response;
             })
             .then(data => {
-                console.log('data', data);
-                setImage(data.message);
+                setImage(data?.message);
             })
             .catch(err => {
 
