@@ -35,7 +35,7 @@ const App = () => {
         setDogs(formatData(data));
       })
       .catch(err => {
-
+        console.error('Error retrieving dogs: ', err);
       })
       .finally(() => {
         setLoading(false);

@@ -23,7 +23,7 @@ const Card = ({ dog }) => {
                 setImage(data?.message);
             })
             .catch(err => {
-
+                console.error('Error retrieving image: ', err);
             })
             .finally(() => {
                 setLoading(false);
