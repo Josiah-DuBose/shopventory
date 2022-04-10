@@ -1,9 +1,12 @@
+import { useMediaQuery } from 'react-responsive';
 import './Navbar.scss';
 
 const Navbar = () => {
+    const isMobile = useMediaQuery({ query: `(max-width: 1150px)` });
+
     return (
         <div className="navbar">
-            <h2 className="navbar__title">Dog App</h2>
+            <h2 className="navbar__title">{isMobile ? `Dog's R Us` : `Dog App`}</h2>
             <ul className="navbar__links">
                 <li className="navbar__link">
                     Home
