@@ -18,6 +18,10 @@
     padding: 1rem;
 }
 
+.navbar__link:hover {
+    cursor: pointer;
+}
+
 .navbar__title {
     align-self: center;
     color: white;
