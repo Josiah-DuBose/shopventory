@@ -1,8 +1,46 @@
 .navbar {
-    background-image: linear-gradient(red, yellow);
+    background: rgb(122,159,172);
+    background: linear-gradient(90deg, rgba(122,159,172,1) 0%, rgba(206,220,224,1) 100%, rgba(0,212,255,1) 100%);
     display: flex;
+    padding: 1rem;
+    flex-wrap: wrap;
+    border-radius: 0.3rem;
 }
 
 .navbar__links {
     list-style-type: none;
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+}
+
+.navbar__link {
+    padding: 1rem;
+}
+
+.navbar__title {
+    align-self: center;
+    color: white;
+}
+
+.navbar__content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content__left {
+    margin-right: auto;
+    width: 50%;
+    align-self: center;
+}
+
+.content__right {
+    margin-left: auto;
+    width: 50%;
+}
+
+.right__video {
+    float: right;
+    width: 560px;
+    height: 315px;
 }
